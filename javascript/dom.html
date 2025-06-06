@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="message">Hello world</h1>
+    <button onclick="changeText()">click me</button>
+    <input type="text" id="name" placeholder="enter the name">
+    <button onclick="addName()">Add</button>
+    <ol id="display">
+        <li>raja</li>
+    </ol>
+    <script>
+        function addName(){
+            const name = document.getElementById('name').value;
+            const li = document.createElement('li')
+            li.innerText=name
+            document.getElementById('display').append(li)
+        }
+       
+       function changeText(){
+            const elem =document.getElementById('message');
+            elem.innerText="Hello KPRCAS"
+            elem.style.color="red"
+            elem.style.fontsize="24px"
+        }
+    </script>
+    
+</body>
+</html>
