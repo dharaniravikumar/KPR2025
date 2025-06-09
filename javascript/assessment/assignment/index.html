@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1
+        {
+             color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="enter your name"><button type="button" onclick="addName()">Add</button><br>
+        <label for="department">Department</label>
+        <input type="text" id="department" placeholder="enter your department"><button type="button" onclick="adddepartment()">Add</button><br>
+        <label for="registernumber">Register Number</label>
+        <input type="number" id="registernumber" placeholder="enter your number"><button type="button" onclick="addregisternumber()">Add</button><br>
+        <label for="batch">Batch</label>
+        <input type="text" id="batch" placeholder="enter your batch"><button type="button" onclick="addbatch()">Add</button><br>
+        <button type="submit">Submit</button>
+        <ol id="display"></ol>
+    </form>
+    <script>
+        function addName() {
+            const name = document.getElementById('name').value;
+            const li = document.createElement('li');
+            li.innerText = name;
+            document.getElementById('display').append(li);
+        }
+
+        function adddepartment() {
+            const department = document.getElementById('department').value;
+            const li = document.createElement('li');
+            li.innerText = department;
+            document.getElementById('display').append(li);
+        }
+
+        function addregisternumber() {
+            const registernumber = document.getElementById('registernumber').value;
+            const li = document.createElement('li');
+            li.innerText = registernumber;
+            document.getElementById('display').append(li);
+        }
+
+        function addbatch() {
+            const batch = document.getElementById('batch').value;
+            const li = document.createElement('li');
+            li.innerText = batch;
+            document.getElementById('display').append(li);
+        }
+    </script>
+    </body>
+</html>
