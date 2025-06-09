@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KPRCAS2025</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Registration Form</title>
     <style>
-        h2{
-            color:darkgreen;
+        h1
+        {
+             color: crimson;
         }
-
     </style>
 </head>
 <body>
-    <h1 style="color :red; font-size: 20px;">hello KPR</h1>
-    <h2>warm welcome</h2>
-    <h3>hello</h3>
-    <h4>BCA</h4>
-    <h5>CT</h5>
-    <h6>IT</h6>
-    <p class="header"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nulla, corporis odio numquam, ullam velit quo laboriosam adipisci expedita illum distinctio explicabo sunt excepturi cumque aliquam. Natus placeat odio sunt!
-    Expedita ullam necessitatibus doloremque reprehenderit natus veniam totam, odio adipisci aut aliquam, repellat nam quas molestias? Sequi sint, praesentium accusantium ratione harum doloremque aperiam totam provident, in eligendi eaque nemo!
-    Qui libero optio dolorem expedita enim, nisi totam aliquam cupiditate quae labore similique veniam assumenda iusto illo temporibus quasi molestias rem iste. Earum voluptatum velit harum excepturi unde voluptas nihil?
-     , perspiciatis culpa ipsam dicta, repellat impedit, ex unde cupiditate. Molestiae odio quibusdam fugiat consequatur ullam aut natus id.
-    Sequi laborum iste inventore aut porro impedit, adipisci possimus non voluptatibus necessitatibus sint quas expedita ut, maiores beatae. Amet consequuntur earum id odit, alias adipisci nisi! Fuga ab tenetur </b> <i>ipsum</i> <strong>dolor</strong>, <br>sit amet consectetur <em><u>adipisicing</u></em> elit. Quod earum ad, vitae id consectetur aliquam est accusantium rem sed iste deserunt molestias dicta nesciunt vel, fugit explicabo asperiores quam harum.</p>    
-    
-    <a  class="Link Link-one" href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
-    <a  class="Link" href="home.html"> HOME</a> 
-    <ol>
-    <li id="one">BCA</li>
-    <li id="two">CT</li>
-    <li id="three">IT</li>
-    </ol>
-    <ul>
-    <li id="four">BCA</li>
-    <li id="five">CT</li>
-    <li id="six">IT</li>
-    </ul>
-</body>
+    <h1>Registration Form</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="enter your name"><button type="button" onclick="addName()">Add</button><br>
+        <label for="department">Department</label>
+        <input type="text" id="department" placeholder="enter your department"><button type="button" onclick="adddepartment()">Add</button><br>
+        <label for="registernumber">Register Number</label>
+        <input type="number" id="registernumber" placeholder="enter your number"><button type="button" onclick="addregisternumber()">Add</button><br>
+        <label for="batch">Batch</label>
+        <input type="text" id="batch" placeholder="enter your batch"><button type="button" onclick="addbatch()">Add</button><br>
+        <button type="submit">Submit</button>
+        <ol id="display"></ol>
+    </form>
+    <script>
+        function addName() {
+            const name = document.getElementById('name').value;
+            const li = document.createElement('li');
+            li.innerText = name;
+            document.getElementById('display').append(li);
+        }
+
+        function adddepartment() {
+            const department = document.getElementById('department').value;
+            const li = document.createElement('li');
+            li.innerText = department;
+            document.getElementById('display').append(li);
+        }
+
+        function addregisternumber() {
+            const registernumber = document.getElementById('registernumber').value;
+            const li = document.createElement('li');
+            li.innerText = registernumber;
+            document.getElementById('display').append(li);
+        }
+
+        function addbatch() {
+            const batch = document.getElementById('batch').value;
+            const li = document.createElement('li');
+            li.innerText = batch;
+            document.getElementById('display').append(li);
+        }
+    </script>
+    </body>
 </html>
